@@ -1,13 +1,13 @@
 {
     const tasks = [
-        {
-            content: "zrobić pracę domową",
-            done: false
-        },
-        {
-            content: "posprzątać",
-            done: true
-        },
+        // {
+        //     content: "zrobić pracę domową",
+        //     done: false
+        // },
+        // {
+        //     content: "posprzątać",
+        //     done: true
+        // },
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -20,13 +20,34 @@
         render();
     }
 
+    const toggleTaskDone = (index) => {
+        tasks[index].done = !tasks[index].done;
+        render();
+    }
+
+    const bindEvents = () => {
+        const removeButtons = document.querySelectorAll(".js-remove");
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+        })
+
+        const doneButtons = document.querySelectorAll(".js-done");
+        doneButtons.forEach((doneButton, index) => {
+            doneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            });
+        })
+    }
+
     const render = () => {
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
             
             <li class="list__item">
-            <button class="list__button js-done">&#10004</button>
+            <button class="list__button js-done">${task.done ? "&#10004" : ""}</button>
             <p class="list__paragraph ${task.done ? "list__paragraph--done" : ""}">
             ${task.content}
             </p>
@@ -36,18 +57,12 @@
             `;
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
-        const removeButtons = document.querySelectorAll(".js-remove");
-        removeButtons.forEach((removeButton, index) => {
-            removeButton.addEventListener("click", () => {
-                removeTask(index);
-            });
-    })
+        bindEvents();
     }
 
     const clearInput = (taskInput) => {
         taskInput.focus();
-        taskInput.value="";
+        taskInput.value = "";
     }
 
     const submitForm = (event) => {
