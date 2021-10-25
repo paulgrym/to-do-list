@@ -43,7 +43,7 @@
             ${task.content}
             </span>
             <button class="list__button list__button--remove js-remove">	
-            &#128465</button>
+            🗑️</button>
             </li>
             `;
         }
