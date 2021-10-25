@@ -1,14 +1,5 @@
 {
-    const tasks = [
-        // {
-        //     content: "zrobić pracę domową",
-        //     done: false
-        // },
-        // {
-        //     content: "posprzątać",
-        //     done: true
-        // },
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({ content: newTaskContent, done: false });
@@ -47,10 +38,10 @@
             htmlString += `
             
             <li class="list__item">
-            <button class="list__button js-done">${task.done ? "&#10004" : ""}</button>
-            <p class="list__paragraph ${task.done ? "list__paragraph--done" : ""}">
+            <button class="list__button js-done">${task.done ? "✓" : ""}</button>
+            <span class="list__taskContent ${task.done ? "list__taskContent--done" : ""}">
             ${task.content}
-            </p>
+            </span>
             <button class="list__button list__button--remove js-remove">	
             &#128465</button>
             </li>
