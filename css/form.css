@@ -16,11 +16,19 @@
 }
 
 .form__button {
-    background-color: teal;
+    background-color: hsl(180, 100%, 25%);
     color: white;
     border: none;
     padding: 10px;
     margin-left: 20px;
+}
+
+.form__button:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__button:active {
+    background-color: hsl(180, 100%, 35%);
 }
 
 @media (max-width:768px) {
