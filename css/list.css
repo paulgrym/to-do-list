@@ -1,6 +1,6 @@
 .list {
     padding: 0 20px 20px;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .list__item {
@@ -28,6 +28,7 @@
 
 .list__button:hover {
     background-color: hsl(120, 88%, 32%);
+    cursor: pointer;
 }
 
 .list__button:active {
