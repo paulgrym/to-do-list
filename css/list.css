@@ -24,6 +24,7 @@
     color: white;
     justify-self: center;
     border: none;
+    transition:0.4s;
 }
 
 .list__button:hover {
