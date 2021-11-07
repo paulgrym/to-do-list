@@ -22,7 +22,7 @@
 }
 
 .buttonsContainer__button:hover {
-    color: hsl(180, 100%, 30%);
+    color: hsl(180, 100%, 35%);
 }
 
 .buttonsContainer__button:disabled {

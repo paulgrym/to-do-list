@@ -13,6 +13,7 @@
 .section__header--withButtons {
     border-bottom: none;
     margin: 0;
+    padding-left: 0;
 }
 
 .section__container {
