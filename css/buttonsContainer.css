@@ -18,7 +18,8 @@
     color: hsl(180, 100%, 25%);
     padding: 10px 0;
     margin: 0 0 0 20px;
-    transition: color 0.4s
+    transition: color 0.4s;
+    cursor: pointer;
 }
 
 .buttonsContainer__button:hover {
