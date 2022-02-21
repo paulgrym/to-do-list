@@ -90,7 +90,9 @@
         };
 
         buttonsElement.innerHTML = `
-            <button class="buttonsContainer__button js-hideDone">
+            <button class="buttonsContainer__button js-hideDone"
+                ${tasks.every(({ done }) => !done) ? "disabled" : ""}
+            >
                 ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button class="buttonsContainer__button js-doneAll" 
